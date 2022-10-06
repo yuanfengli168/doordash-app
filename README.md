@@ -1,3 +1,21 @@
+# doordash-app
+----------------------
+A lesson to create a project similar to doordash application. 
+
+
+## NPM: 
+- go into the folder: 
+```
+npm start
+```
+
+
+
+
+
+
+-------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
