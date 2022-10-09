@@ -9,13 +9,13 @@ class LoginForm extends React.Component {
   };
 
   onFinish = (data) => {
-    console.log("received", data)
     this.setState({
       loading: true,
     });
     login(data)
       .then(() => {
         message.success(`Login Successful`);
+        // this.props.onSuccess();   // This is why the login was not success.
         this.props.onSuccess();
       })
       .catch((err) => {

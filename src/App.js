@@ -1,19 +1,43 @@
-import { Layout } from "antd";
-import './App.css';
+import { Layout, Typography } from "antd";
+import { useState } from "react";
+import FoodList from "./components/FoodList";
 import LoginForm from "./components/LoginForm";
+import MyCart from "./components/MyCart";
+import SignupForm from "./components/SignupForm";
+import './App.css';
 
 const { Header, Content } = Layout;
+const { Title } = Typography;
 
 function App() {
+  const [authed, setAuthed] = useState(false);
+  console.log("The Auth is: ", authed)
+
   return (
-    <Layout style={{ height: "100vh"}}>
-      <Header>Header</Header>
-      <Content style={{
-        padding: "50px",
-        maxHeight: "calc(100% - 64px)",
-        overflowY: "auto",
-      }}>
-        <LoginForm />
+    <Layout style={{ height: "100vh" }}>
+      <Header>
+        <div className="header">
+          <Title
+            level={2}
+            style={{ color: "white", lineHeight: "inherit", marginBottom: 0 }}
+          >
+            Lai Food
+          </Title>
+          <div>{authed ? <MyCart /> : <SignupForm />}</div>
+        </div>
+      </Header>
+      <Content
+        style={{
+          padding: "50px",
+          maxHeight: "calc(100% - 64px)",
+          overflowY: "auto",
+        }}
+      >
+        {authed ? (
+          <FoodList />
+        ) : (
+          <LoginForm onSuccess={() => setAuthed(true)} />
+        )}
       </Content>
     </Layout>
   );
