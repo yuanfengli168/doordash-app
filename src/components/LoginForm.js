@@ -15,7 +15,8 @@ class LoginForm extends React.Component {
     login(data)
       .then(() => {
         message.success(`Login Successful`);
-        // this.props.onSuccess();
+        // this.props.onSuccess();   // This is why the login was not success.
+        this.props.onSuccess();
       })
       .catch((err) => {
         message.error(err.message);

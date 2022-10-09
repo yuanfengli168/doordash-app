@@ -11,6 +11,7 @@ const { Title } = Typography;
 
 function App() {
   const [authed, setAuthed] = useState(false);
+  console.log("The Auth is: ", authed)
 
   return (
     <Layout style={{ height: "100vh" }}>
