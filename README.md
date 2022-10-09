@@ -9,7 +9,14 @@ A lesson to create a project similar to doordash application.
 npm start
 ```
 
+## Backend Part: 
+- https://github.com/yuanfengli168/onlineOrder
 
+## Final Demo on Youtube: 
+- https://youtu.be/_xQ_wZvpF58
+
+## Find further instructions: 
+- https://github.com/yuanfengli168/private_docs/tree/main/LaiOffer-Project-aug2022
 
 
 
